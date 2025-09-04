@@ -1,3 +1,24 @@
+/*
+====================================================
+STORED PROCEDURE 
+====================================================
+Script Purpose :
+		This stored procedure load data into the 'BRONZE' schema from external csv files.
+		It perfrom the following actions :
+		--Truncates the bronze table before loading data.
+		-- uses the 'BULK INSERT command to load data from csv Filers to bronze tabless
+
+Parametrs :
+NONE 
+This stored preocdure does not accept any parameter , rather it had many variables , used to get the desired time duration of loading the tables
+
+usage example :
+	EXEC bronze.load_bronze
+======================================================
+*/
+
+
+
 
 -- Create The Stored Procedures
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS 
