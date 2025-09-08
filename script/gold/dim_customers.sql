@@ -9,8 +9,9 @@ Gold1 : Creating The Customer Dimesion
 
 */
 
-
-
+IF OBJECT_ID ('gold.dim_customers' , 'V') IS NOT NULL 
+	DROP VIEW  gold.dim_customers ;
+GO
 CREATE VIEW gold.dim_customers AS (
 SELECT 
     ROW_NUMBER() OVER(ORDER BY ci.cst_id) AS customer_key ,
